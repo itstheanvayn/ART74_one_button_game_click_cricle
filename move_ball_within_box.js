@@ -52,8 +52,7 @@ function mousePressed() {
     // The player clicked within the circle's radius
     question = "You clicked the circle! 🎉\n Please press any key or Mouse key to continue with this game!";  // Update message for circle click
     circle_clicked = 1;
+    text(question, width / 3, 80);
   } 
-  // -------------------- Otherwise --------------------
-  // If neither shape was clicked, the message stays the same.
-   text(question, width / 3, 80);
 }
+
