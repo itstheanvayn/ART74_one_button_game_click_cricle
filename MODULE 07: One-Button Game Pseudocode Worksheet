@@ -1,0 +1,39 @@
+MODULE 07: One-Button Game Pseudocode Worksheet (p5.js) |
+Click Circle Game
+___________________________________________________________________________________________________________________
+1. Game Idea / Goal | Describe what happens in your game. What is the goal?
+● The player must click on the circle.
+● If they click the circle, they get a message.
+● Goal: Click the circle which is moving in the given box.
+
+2. Variables (What the game needs to keep track of) | List things your game needs to remember (e.g., mouse position, player position).
+● question — message shown at the top of the screen
+
+● ball_x, ball_y, radius — circle’s position and radius
+●   x_speed — circle speed in horizontal direction
+●   y_speed — circle speed in vertical direction
+●  width, height -- Box / canvas dimension
+●  circle_clicked = variable to track whether circle clicked
+
+3. Setup (Runs once at the start) | What should happen once at the beginning?
+● setup():
+● create a 600x400 canvas
+
+4. Draw Loop (Runs every frame) | What happens every frame?
+● draw():● If circle is already clicked then return● check whether the circle reached the box boundary, if yes then change its direction  else continue in the same direction.● change the circle position by adding x and y speed.
+● set text size and color
+● display the question text at the top of the screen
+● draw the circle at (ball_x, ball_y) with radius
+
+5. Input | Button Press or Mouse Location | What happens when the player presses the button? What is the interaction?
+● when mouse is pressed:● if  circle_clicked = 1, then return● calculate distance from mouse to circle center● if distance < circle radius:
+● then set question = "You clicked the circle! \n Please press any key or Mouse key to continue with this game!"
+
+
+6. Update Functions | Write what your helper functions will do.
+● mousePressed():
+● This function checks whether mouse is pressed inside the circle boundary
+● if yes then it shows the current message stored in question
+
+7. End Condition | When does the game end?
+● There is no end condition — messages appear and disappear    when circle is clicked or mouse button is pressed or any button is pressed
